@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://utht3610etrw"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/UI/UI_Launchers/UI_launchers_and.gd" id="1_d6ywa"]
+[ext_resource type="PackedScene" uid="uid://c1m7fi6p3fhkh" path="res://1_MVC_Android/Tools/UI_Page_BackGrand/UI_Page_BackGrand.tscn" id="2_o3mrh"]
+[ext_resource type="PackedScene" uid="uid://bstljhxtisn5y" path="res://1_MVC_Android/Tank/tscn/Show_Paga_Line/UI_Show_Page/UI_Show_Page.tscn" id="3_5cx0k"]
+[ext_resource type="PackedScene" uid="uid://dyidpnuc7oxqm" path="res://1_MVC_Android/UI/UI_Menu/UI_Menu/UI_Menu.tscn" id="4_nbr08"]
+[ext_resource type="PackedScene" uid="uid://br3n48exo8xon" path="res://1_MVC_Android/Tools/Toush/UI_Toush.tscn" id="5_yff1y"]
+
+[node name="UI_Launchers_And" type="Node2D"]
+script = ExtResource("1_d6ywa")
+
+[node name="UI_Page_BackGrand" parent="." instance=ExtResource("2_o3mrh")]
+z_index = -100
+position = Vector2(10, 80)
+
+[node name="UI_Show_Page" parent="." instance=ExtResource("3_5cx0k")]
+
+[node name="UI_Menu" parent="." instance=ExtResource("4_nbr08")]
+z_index = -1
+
+[node name="UI_Toush" parent="." instance=ExtResource("5_yff1y")]

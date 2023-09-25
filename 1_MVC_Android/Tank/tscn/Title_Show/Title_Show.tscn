@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=3 uid="uid://cj8tvc0iapnhn"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/tscn/Title_Show/Title_Show.gd" id="1_ltrm0"]
+[ext_resource type="Texture2D" uid="uid://ddlmjgrka0bef" path="res://9_My_assets/1_assats/A_55.png" id="1_nx361"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="2_ong7r"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="3_ka612"]
+[ext_resource type="Texture2D" uid="uid://25wnn2mbgbfi" path="res://9_My_assets/1_assats/A_56.png" id="4_6elxc"]
+[ext_resource type="PackedScene" uid="uid://cl4kc6liqws4t" path="res://1_MVC_Android/UI/UI_Display_Format/ui_display_format.tscn" id="5_hkif1"]
+
+[sub_resource type="Animation" id="Animation_r1dpw"]
+resource_name = "New_Off"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("c:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 680)]
+}
+
+[sub_resource type="Animation" id="Animation_ryv5s"]
+resource_name = "New_On"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("c:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 680), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1b7mv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("c:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 680)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_32jog"]
+_data = {
+"New_Off": SubResource("Animation_r1dpw"),
+"New_On": SubResource("Animation_ryv5s"),
+"RESET": SubResource("Animation_1b7mv")
+}
+
+[node name="Title_Show" type="Node2D"]
+script = ExtResource("1_ltrm0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.53138, 1.76839)
+texture = ExtResource("1_nx361")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D"]
+offset_left = 20.0
+offset_top = 288.0
+offset_right = 209.0
+offset_bottom = 351.0
+color = Color(0.129412, 0.129412, 0.129412, 1)
+
+[node name="c" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 680.0
+offset_right = 370.0
+offset_bottom = 1326.0
+
+[node name="ColorRect" type="ColorRect" parent="c"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.298039, 0.298039, 0.298039, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="c"]
+position = Vector2(9, 7)
+scale = Vector2(0.486111, 0.541284)
+texture = ExtResource("2_ong7r")
+centered = false
+
+[node name="TextureButton" type="TextureButton" parent="c/Sprite2D"]
+offset_left = 553.371
+offset_top = 20.322
+offset_right = 658.371
+offset_bottom = 92.322
+texture_normal = ExtResource("3_ka612")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="s" type="ScrollContainer" parent="c"]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 76.0
+offset_right = 337.0
+offset_bottom = 514.0
+
+[node name="v" type="VBoxContainer" parent="c/s"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="h" type="HBoxContainer" parent="c"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 528.0
+offset_right = 335.0
+offset_bottom = 567.0
+
+[node name="Label" type="Label" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+text = "10/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="h2" type="HBoxContainer" parent="c"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 571.0
+offset_right = 339.0
+offset_bottom = 609.0
+
+[node name="HSlider" type="HSlider" parent="c/h2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
+theme_override_icons/grabber = ExtResource("4_6elxc")
+theme_override_icons/grabber_highlight = ExtResource("4_6elxc")
+theme_override_icons/grabber_disabled = ExtResource("4_6elxc")
+theme_override_icons/tick = ExtResource("4_6elxc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_32jog")
+}
+
+[node name="UI_Display_Format" parent="." instance=ExtResource("5_hkif1")]
+visible = false
+
+[connection signal="pressed" from="c/Sprite2D/TextureButton" to="." method="_on_Text_Back_From"]
+[connection signal="value_changed" from="c/h2/HSlider" to="." method="_on_h_slider_value_changed"]

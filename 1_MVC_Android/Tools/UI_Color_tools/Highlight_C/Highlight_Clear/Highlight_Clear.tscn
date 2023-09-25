@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnm0iuirahed8"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_C/Highlight_Clear/Highlight_Clear.gd" id="1_6cghj"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="2_2cp5f"]
+[ext_resource type="Texture2D" uid="uid://g22je165p4f7" path="res://9_My_assets/1_assats/A_4.png" id="3_t0tle"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="4_ube8e"]
+[ext_resource type="Texture2D" uid="uid://digi651e6w78s" path="res://9_My_assets/1_assats/A_49.png" id="5_ep8ox"]
+[ext_resource type="PackedScene" uid="uid://lqr8ow2sytcb" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_C/Highlight_Clear_Pen/Highlight_Clear_Pen.tscn" id="6_a544w"]
+
+[node name="Highlight_Clear" type="Node2D"]
+script = ExtResource("1_6cghj")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(2, 8)
+scale = Vector2(0.508333, 0.477064)
+texture = ExtResource("2_2cp5f")
+centered = false
+
+[node name="Button_reset" type="TextureButton" parent="Sprite"]
+offset_left = 249.836
+offset_top = 12.5769
+offset_right = 334.836
+offset_bottom = 92.5769
+texture_normal = ExtResource("3_t0tle")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_back" type="TextureButton" parent="Sprite"]
+offset_left = 537.0
+offset_top = 15.0
+offset_right = 627.0
+offset_bottom = 88.0
+texture_normal = ExtResource("4_ube8e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_Save" type="TextureButton" parent="Sprite"]
+offset_left = 411.148
+offset_top = 14.6731
+offset_right = 494.148
+offset_bottom = 95.6731
+texture_normal = ExtResource("5_ep8ox")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Highlight_Clear_Pen" parent="." instance=ExtResource("6_a544w")]
+
+[connection signal="pressed" from="Sprite/Button_back" to="." method="_on_Button_back_pressed"]
+[connection signal="pressed" from="Sprite/Button_Save" to="." method="_on_Button_Save_pressed"]

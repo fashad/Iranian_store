@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://djbxevuhubydx"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/tscn/List_Item_Titie/List_Item_Titie.gd" id="1_j570f"]
+[ext_resource type="Texture2D" uid="uid://b1coe1bnjxkb0" path="res://9_My_assets/1_assats/A_58.png" id="2_kvb48"]
+
+[node name="List_Item_Titie" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 15
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("1_j570f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_kvb48")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_TouchScreenButton_pressed"]

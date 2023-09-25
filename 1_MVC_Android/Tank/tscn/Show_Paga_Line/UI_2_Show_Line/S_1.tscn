@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://jvebdocnmrst"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/tscn/Show_Paga_Line/UI_2_Show_Line/S_1.gd" id="1_rb4ws"]
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/gd/Q_12/Q_12.gd" id="2_bjx1e"]
+
+[node name="S_1" type="Node2D"]
+script = ExtResource("1_rb4ws")
+
+[node name="Q_12" type="Node2D" parent="."]
+script = ExtResource("2_bjx1e")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://lqr8ow2sytcb"]
+
+[ext_resource type="Texture2D" uid="uid://bp5xrjxi4qwkb" path="res://9_My_assets/1_assats/A_30.png" id="1"]
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_C/Highlight_Clear_Pen/Highlight_Clear_Pen.gd" id="1_nfcf6"]
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 15.0
+
+[node name="Highlight_Clear_Pen" type="Node2D"]
+script = ExtResource("1_nfcf6")
+
+[node name="TextureClear" type="TextureButton" parent="."]
+offset_right = 30.0
+offset_bottom = 28.0
+texture_normal = ExtResource("1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CheckBox" type="CheckBox" parent="TextureClear"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -24.0
+offset_right = 26.0
+
+[node name="Area2D_tools_Clear" type="Area2D" parent="."]
+
+[node name="Co" type="CollisionShape2D" parent="Area2D_tools_Clear"]
+position = Vector2(14, 14)
+shape = SubResource("1")
+
+[connection signal="button_down" from="TextureClear" to="." method="_on_TextureClear_button_down"]
+[connection signal="button_up" from="TextureClear" to="." method="_on_TextureClear_button_up"]
+[connection signal="body_entered" from="Area2D_tools_Clear" to="." method="_on_Area2D_tools_Clear_body_entered"]

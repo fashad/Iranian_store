@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://btd04wa6uyfw4"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/UI/UI_Main/UI_End_Book/Ui_end_book.gd" id="1_ch28p"]
+[ext_resource type="Texture2D" uid="uid://dsl72kwc4mrnl" path="res://9_My_assets/1_assats/A_62.png" id="2_x5r50"]
+
+[node name="UI_End_Book" type="Node2D"]
+script = ExtResource("1_ch28p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-10, 0)
+scale = Vector2(0.58642, 0.811576)
+texture = ExtResource("2_x5r50")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+offset_left = 116.0
+offset_top = 112.0
+offset_right = 237.0
+offset_bottom = 164.0
+text = "di"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

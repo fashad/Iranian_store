@@ -1,0 +1,100 @@
+[gd_scene load_steps=11 format=3 uid="uid://bw7yjkeyj0xe7"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_W/Highlight_Word/Highlight_Word.gd" id="1_sohc4"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="2_y2m86"]
+[ext_resource type="Texture2D" uid="uid://dei4o0d4ms6oy" path="res://9_My_assets/1_assats/A_32.bmp" id="3_s4bmo"]
+[ext_resource type="Texture2D" uid="uid://c2gjeuo7wy1ui" path="res://9_My_assets/1_assats/A_33.bmp" id="4_ehiey"]
+[ext_resource type="Texture2D" uid="uid://cqbbjcvylbxg2" path="res://9_My_assets/1_assats/A_34.bmp" id="5_0pta6"]
+[ext_resource type="Texture2D" uid="uid://l52ceum66gxi" path="res://9_My_assets/1_assats/A_35.bmp" id="6_5m38s"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="7_o80mk"]
+[ext_resource type="Texture2D" uid="uid://g22je165p4f7" path="res://9_My_assets/1_assats/A_4.png" id="8_t71l4"]
+[ext_resource type="Texture2D" uid="uid://digi651e6w78s" path="res://9_My_assets/1_assats/A_49.png" id="9_7e3wa"]
+[ext_resource type="PackedScene" uid="uid://d25aqcnch8w6w" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_W/Highlight_Word_Pen/Highlight_Word_Pen.tscn" id="10_r18hl"]
+
+[node name="Highlight_Word" type="Node2D"]
+script = ExtResource("1_sohc4")
+
+[node name="s" type="Sprite2D" parent="."]
+position = Vector2(4, 8)
+scale = Vector2(0.506944, 0.46789)
+texture = ExtResource("2_y2m86")
+centered = false
+
+[node name="Button_Bluev" type="TextureButton" parent="s"]
+offset_left = 32.0
+offset_top = 29.0
+offset_right = 95.0
+offset_bottom = 87.0
+texture_normal = ExtResource("3_s4bmo")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Button_yellowv" type="TextureButton" parent="s"]
+offset_left = 101.0
+offset_top = 28.0
+offset_right = 162.0
+offset_bottom = 85.0
+texture_normal = ExtResource("4_ehiey")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="Button_Red" type="TextureButton" parent="s"]
+offset_left = 165.699
+offset_top = 23.5098
+offset_right = 226.699
+offset_bottom = 87.5098
+texture_normal = ExtResource("5_0pta6")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_Purple" type="TextureButton" parent="s"]
+offset_left = 230.795
+offset_top = 23.5098
+offset_right = 291.795
+offset_bottom = 85.5098
+texture_normal = ExtResource("6_5m38s")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button_back" type="TextureButton" parent="s"]
+offset_left = 560.0
+offset_top = 20.0
+offset_right = 649.0
+offset_bottom = 90.0
+texture_normal = ExtResource("7_o80mk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_reset" type="TextureButton" parent="s"]
+offset_left = 313.644
+offset_top = 19.2353
+offset_right = 386.644
+offset_bottom = 87.2353
+texture_normal = ExtResource("8_t71l4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_Save" type="TextureButton" parent="s"]
+offset_left = 441.863
+offset_top = 17.098
+offset_right = 520.863
+offset_bottom = 94.098
+texture_normal = ExtResource("9_7e3wa")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="item_1" type="Sprite2D" parent="s"]
+position = Vector2(98.6301, 98.3137)
+scale = Vector2(0.162954, 0.178105)
+texture = ExtResource("3_s4bmo")
+centered = false
+
+[node name="Highlight_Word_Pen" parent="." instance=ExtResource("10_r18hl")]
+
+[connection signal="pressed" from="s/Button_Bluev" to="." method="_on_Button_Blue_pressed"]
+[connection signal="pressed" from="s/Button_yellowv" to="." method="_on_Button_yellow_pressed"]
+[connection signal="pressed" from="s/Button_Red" to="." method="_on_Button_Red_pressed"]
+[connection signal="pressed" from="s/Button_Purple" to="." method="_on_Button_Purple_pressed"]
+[connection signal="pressed" from="s/Button_back" to="." method="_on_Button_back_pressed"]
+[connection signal="pressed" from="s/Button_reset" to="." method="_on_Button_reset_pressed"]
+[connection signal="pressed" from="s/Button_Save" to="." method="_on_Button_Save_pressed"]

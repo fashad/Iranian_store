@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5pir041fc3v7"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/UI_Color_tools/Share/Share.gd" id="1_42ahf"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="1_755xy"]
+[ext_resource type="PackedScene" uid="uid://cl4kc6liqws4t" path="res://1_MVC_Android/UI/UI_Display_Format/ui_display_format.tscn" id="2_d318f"]
+[ext_resource type="Texture2D" uid="uid://g22je165p4f7" path="res://9_My_assets/1_assats/A_4.png" id="3_pi2hs"]
+[ext_resource type="Texture2D" uid="uid://dvu5b6w8uyp7i" path="res://9_My_assets/1_assats/share.png" id="4_4hpec"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="5_ya5qm"]
+
+[node name="Share" type="Node2D"]
+script = ExtResource("1_42ahf")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(185.5, 39.5)
+scale = Vector2(0.490278, -0.577982)
+texture = ExtResource("1_755xy")
+
+[node name="UI_Display_Format" parent="." instance=ExtResource("2_d318f")]
+visible = false
+
+[node name="Button_reset" type="TextureButton" parent="."]
+offset_left = 149.0
+offset_top = 20.0
+offset_right = 191.0
+offset_bottom = 60.0
+texture_normal = ExtResource("3_pi2hs")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_Share" type="TextureButton" parent="."]
+offset_left = 202.0
+offset_top = 19.0
+offset_right = 244.0
+offset_bottom = 59.0
+texture_normal = ExtResource("4_4hpec")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_back" type="TextureButton" parent="."]
+offset_left = 266.0
+offset_top = 19.0
+offset_right = 325.0
+offset_bottom = 59.0
+texture_normal = ExtResource("5_ya5qm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Button_reset" to="." method="_on_Button_reset_pressed"]
+[connection signal="pressed" from="Button_Share" to="." method="_on_Button_Share_pressed"]
+[connection signal="pressed" from="Button_back" to="." method="_on_Button_back_pressed"]

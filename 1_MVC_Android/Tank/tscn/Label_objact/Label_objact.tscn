@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://rcnqoktfe6en"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/tscn/Label_objact/Label_objact.gd" id="1_5v4id"]
+
+[node name="Label_objact" type="Node2D"]
+script = ExtResource("1_5v4id")
+
+[node name="module" type="ColorRect" parent="."]
+visible = false
+offset_top = 10.0
+offset_bottom = 12.0
+color = Color(0.722, 0.9462, 0.95, 1)
+
+[node name="i_Select" type="ColorRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 4.0
+
+[node name="search" type="ColorRect" parent="."]
+visible = false
+offset_top = 20.0
+offset_right = 7.0
+offset_bottom = 24.0
+color = Color(1, 0, 0, 1)
+
+[node name="text_i_id" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 7
+
+[node name="objact_i_id" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 10
+
+[node name="text_ok" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
