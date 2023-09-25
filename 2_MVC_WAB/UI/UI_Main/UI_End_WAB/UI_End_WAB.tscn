@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgo2w12y4bg82"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/UI/UI_Main/UI_End_WAB/UI_End_WAB.gd" id="1_3serj"]
+
+[node name="UI_End_WAB" type="Node2D"]
+script = ExtResource("1_3serj")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvtqnowrrenga"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/Tank_WAB/tscn/Download_List_Item_Book/Download_List_Item_Book.gd" id="1_x20md"]
+[ext_resource type="Texture2D" uid="uid://drphugy1o20ia" path="res://9_My_assets/1_assats/A_39.png" id="2_lxxuu"]
+
+[node name="Download_List_Item_Book" type="Label"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 362.0
+offset_bottom = 100.0
+size_flags_horizontal = 15
+size_flags_vertical = 15
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+script = ExtResource("1_x20md")
+
+[node name="v" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Text_but1" type="Button" parent="v"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 3.0
+flat = true
+alignment = 0
+clip_text = true
+
+[node name="Text_but2" type="TextureButton" parent="v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
+texture_normal = ExtResource("2_lxxuu")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="v/Text_but1" to="." method="_on_text_but_1_pressed"]
+[connection signal="pressed" from="v/Text_but2" to="." method="_on_text_but_2_pressed"]

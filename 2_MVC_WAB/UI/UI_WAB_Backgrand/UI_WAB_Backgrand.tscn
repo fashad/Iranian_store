@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://don3tnxtennop"]
+
+[ext_resource type="Texture2D" uid="uid://bnbnus3hby73f" path="res://9_My_assets/1_assats/A_52.png" id="1_nuuky"]
+
+[node name="UI_WAB_Backgrand" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.521067, 0.800734)
+texture = ExtResource("1_nuuky")
+centered = false

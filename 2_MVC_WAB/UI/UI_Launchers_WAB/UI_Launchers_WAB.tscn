@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbsbtdbwmlbwt"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/UI/UI_Launchers_WAB/UI_Launchers_WAB.gd" id="1_543jk"]
+[ext_resource type="PackedScene" uid="uid://don3tnxtennop" path="res://2_MVC_WAB/UI/UI_WAB_Backgrand/UI_WAB_Backgrand.tscn" id="2_jlioo"]
+[ext_resource type="PackedScene" uid="uid://bn1pvkpi0vti8" path="res://2_MVC_WAB/UI/All_book/Load_All_My_Book/Load_All_My_Book.tscn" id="3_wvcms"]
+[ext_resource type="PackedScene" uid="uid://cao5fpix0aeyc" path="res://2_MVC_WAB/UI/All_book/List_Download_All_Book/List_Download_All_Book.tscn" id="4_frw3n"]
+[ext_resource type="PackedScene" uid="uid://tbwj4b0iv7c6" path="res://2_MVC_WAB/UI/My_Accountt/UI_Launchers_Account/UI_Launchers_Account.tscn" id="5_whdok"]
+[ext_resource type="Texture2D" uid="uid://cop4lfrp5nil" path="res://9_My_assets/1_assats/A_40.png" id="6_sp1i6"]
+[ext_resource type="Texture2D" uid="uid://b0whf1oreaj6m" path="res://9_My_assets/1_assats/A_50.png" id="7_eqenf"]
+[ext_resource type="Texture2D" uid="uid://blpd2836w7lv1" path="res://9_My_assets/1_assats/A_38.png" id="8_lkxy7"]
+[ext_resource type="Texture2D" uid="uid://7wcy3yb8fe0d" path="res://9_My_assets/1_assats/A_37.png" id="9_rp5eo"]
+[ext_resource type="Texture2D" uid="uid://drphugy1o20ia" path="res://9_My_assets/1_assats/A_39.png" id="10_d7g5w"]
+
+[node name="UI_Launchers_WAB" type="Node2D"]
+script = ExtResource("1_543jk")
+
+[node name="UI_WAB_Backgrand" parent="." instance=ExtResource("2_jlioo")]
+
+[node name="c" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 371.0
+offset_bottom = 650.0
+
+[node name="Load_All_My_Book" parent="c" instance=ExtResource("3_wvcms")]
+
+[node name="List_Download_All_Book" parent="c" instance=ExtResource("4_frw3n")]
+
+[node name="UI_Launchers_Account" parent="c" instance=ExtResource("5_whdok")]
+
+[node name="h" type="HBoxContainer" parent="c"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 539.0
+offset_right = 314.0
+offset_bottom = 593.0
+
+[node name="but_My_account" type="TextureButton" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("6_sp1i6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="but_Search_All_book" type="TextureButton" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("7_eqenf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="book_shelf" type="TextureButton" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("8_lkxy7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Download" type="TextureButton" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("9_rp5eo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Texture5" type="TextureButton" parent="c/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("10_d7g5w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="c/h/but_My_account" to="." method="_on_but_my_account_pressed"]
+[connection signal="pressed" from="c/h/but_Search_All_book" to="." method="_on_but_search_all_book_pressed"]
+[connection signal="pressed" from="c/h/book_shelf" to="." method="_on_book_shelf_pressed"]
+[connection signal="pressed" from="c/h/Download" to="." method="_on_download_pressed"]

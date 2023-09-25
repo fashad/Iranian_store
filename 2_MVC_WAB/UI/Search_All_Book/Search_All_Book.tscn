@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cngefwugfd58f"]
+
+[ext_resource type="Texture2D" uid="uid://b2djjy68s01c8" path="res://9_My_assets/1_assats/A_6.png" id="1_yybup"]
+
+[node name="Serach_All_Book" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 368.0
+offset_bottom = 555.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22, 144)
+scale = Vector2(1.98758, 1.79333)
+texture = ExtResource("1_yybup")
+centered = false
