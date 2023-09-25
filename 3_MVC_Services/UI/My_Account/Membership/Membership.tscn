@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnwqljkff5pp0"]
+
+[ext_resource type="Script" path="res://3_MVC_Services/UI/My_Account/Membership/Membership.gd" id="1_iorby"]
+[ext_resource type="PackedScene" uid="uid://don3tnxtennop" path="res://2_MVC_WAB/UI/UI_WAB_Backgrand/UI_WAB_Backgrand.tscn" id="1_m4b4m"]
+
+[node name="Membership" type="Node2D"]
+script = ExtResource("1_iorby")
+
+[node name="UI_WAB_Backgrand" parent="." instance=ExtResource("1_m4b4m")]
+
+[node name="N" type="Node2D" parent="."]
+position = Vector2(-3, -2)
+
+[node name="i_name" type="LineEdit" parent="N"]
+offset_left = 100.0
+offset_top = 77.0
+offset_right = 276.0
+offset_bottom = 131.0
+placeholder_text = "نام   نام  خانوادگی"
+alignment = 2
+
+[node name="i_gmali" type="LineEdit" parent="N"]
+offset_left = 100.0
+offset_top = 142.0
+offset_right = 276.0
+offset_bottom = 196.0
+placeholder_text = "ایمیل"
+alignment = 2
+
+[node name="i_pon" type="LineEdit" parent="N"]
+offset_left = 101.0
+offset_top = 207.0
+offset_right = 277.0
+offset_bottom = 261.0
+placeholder_text = "شماره  تماس"
+alignment = 2
+max_length = 10
+
+[node name="i_usar" type="LineEdit" parent="N"]
+offset_left = 101.0
+offset_top = 267.0
+offset_right = 277.0
+offset_bottom = 321.0
+placeholder_text = "نام کاربری"
+alignment = 2
+
+[node name="i_pass_1" type="LineEdit" parent="N"]
+offset_left = 100.0
+offset_top = 329.0
+offset_right = 276.0
+offset_bottom = 383.0
+placeholder_text = "رمز ورود"
+alignment = 2
+
+[node name="i_pass_2" type="LineEdit" parent="N"]
+offset_left = 101.0
+offset_top = 394.0
+offset_right = 277.0
+offset_bottom = 448.0
+placeholder_text = "تکرار رمز ورود"
+alignment = 2
+
+[node name="Button" type="Button" parent="N"]
+offset_left = 62.0
+offset_top = 498.0
+offset_right = 240.0
+offset_bottom = 540.0
+text = "ثبت نام"
+
+[node name="Button2" type="Button" parent="N"]
+offset_left = 241.0
+offset_top = 499.0
+offset_right = 321.0
+offset_bottom = 541.0
+text = "پاک"
+
+[node name="Label" type="Label" parent="N"]
+visible = false
+modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
+offset_left = 109.0
+offset_top = 459.0
+offset_right = 277.0
+offset_bottom = 507.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="N/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="N/Button2" to="." method="_on_button_2_pressed"]

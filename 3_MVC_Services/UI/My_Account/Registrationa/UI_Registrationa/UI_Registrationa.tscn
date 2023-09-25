@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0qpfikpwqj8y"]
+
+[ext_resource type="Script" path="res://3_MVC_Services/UI/My_Account/Registrationa/UI_Registrationa/UI_Registrationa.gd" id="1_nrn65"]
+[ext_resource type="PackedScene" uid="uid://don3tnxtennop" path="res://2_MVC_WAB/UI/UI_WAB_Backgrand/UI_WAB_Backgrand.tscn" id="2_wn4q6"]
+[ext_resource type="Texture2D" uid="uid://s7wj2u0dp8qv" path="res://9_My_assets/1_assats/A_28.png" id="3_dt85p"]
+
+[node name="UI_Registrationa" type="Node2D"]
+script = ExtResource("1_nrn65")
+
+[node name="UI_WAB_Backgrand" parent="." instance=ExtResource("2_wn4q6")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(121, 86)
+scale = Vector2(1.24528, 1.27103)
+texture = ExtResource("3_dt85p")
+centered = false
+
+[node name="n" type="Node2D" parent="."]
+position = Vector2(7, 112)
+
+[node name="i_phone_number" type="LineEdit" parent="n"]
+offset_left = 63.0
+offset_top = 119.0
+offset_right = 296.0
+offset_bottom = 181.0
+placeholder_text = "تلفن"
+alignment = 2
+
+[node name="i_pass" type="LineEdit" parent="n"]
+offset_left = 63.0
+offset_top = 188.0
+offset_right = 296.0
+offset_bottom = 250.0
+placeholder_text = "کلمه عبور"
+alignment = 2
+
+[node name="but_go" type="Button" parent="n"]
+offset_left = 96.0
+offset_top = 263.0
+offset_right = 272.0
+offset_bottom = 315.0
+text = "ورود"
+
+[node name="but_Membership" type="Button" parent="n"]
+offset_left = 99.0
+offset_top = 416.0
+offset_right = 275.0
+offset_bottom = 468.0
+text = "عضویت"
+
+[node name="Label" type="Label" parent="n"]
+visible = false
+modulate = Color(0.0117647, 0.0117647, 0.0117647, 1)
+offset_left = 97.0
+offset_top = 342.0
+offset_right = 265.0
+offset_bottom = 390.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="n/but_go" to="." method="_on_but_go_pressed"]
+[connection signal="pressed" from="n/but_Membership" to="." method="_on_but_membership_pressed"]
