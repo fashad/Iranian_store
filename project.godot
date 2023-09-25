@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Iranian_store"
+run/main_scene="res://4_Data/UI_Main/UI_Load_Data/UI_Load_Data.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+config/icon="res://9_My_assets/1_assats/A_28.png"
+
+[autoload]
+
+Public_Addras="*res://4_Data/1_G_class/Public_Addras.gd"
+Public_Class="*res://4_Data/1_G_class/Public_Class.gd"
+
+[display]
+
+window/size/viewport_width=370
+window/size/viewport_height=650
+window/stretch/mode="canvas_items"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
