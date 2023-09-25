@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsfhfm0ctjwfq"]
+
+[ext_resource type="Script" path="res://6_MVC_Connection/HTTP_Con/Download_HTTP_Request/Download_http_request.gd" id="1_4a4wn"]
+
+[node name="Download_HTTP_Request" type="Node2D"]
+script = ExtResource("1_4a4wn")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

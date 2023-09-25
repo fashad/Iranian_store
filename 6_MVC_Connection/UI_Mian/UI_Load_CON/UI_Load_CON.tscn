@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddeijptjl1p4h"]
+
+[ext_resource type="Script" path="res://6_MVC_Connection/UI_Mian/UI_Load_CON/UI_Load_CON.gd" id="1_cb3is"]
+
+[node name="UI_Load_CON" type="Node2D"]
+script = ExtResource("1_cb3is")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 82.0
+offset_top = 84.0
+offset_right = 253.0
+offset_bottom = 131.0
+text = "UI_Load_CON"
+horizontal_alignment = 1
+vertical_alignment = 1
