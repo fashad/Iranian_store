@@ -1,0 +1,205 @@
+[gd_scene load_steps=5 format=3 uid="uid://ybmt255tvnpa"]
+
+[ext_resource type="Texture2D" uid="uid://xsmp4ts5acbd" path="res://9_My_assets/1_assats/A_43.bmp" id="1_3csot"]
+[ext_resource type="Script" path="res://5_MVC_TPM/TPM_UI_Launchers_And/TPM_UI_Launchers_And.gd" id="1_wlapc"]
+[ext_resource type="PackedScene" uid="uid://cl4kc6liqws4t" path="res://1_MVC_Android/UI/UI_Display_Format/ui_display_format.tscn" id="2_3fjdy"]
+[ext_resource type="Texture2D" uid="uid://dh4dtkipk80wg" path="res://9_My_assets/1_assats/A_44.bmp" id="4_4wupp"]
+
+[node name="TPM_UI_Launchers_And" type="Node2D"]
+script = ExtResource("1_wlapc")
+
+[node name="UI_Display_Format" parent="." instance=ExtResource("2_3fjdy")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 486.0
+offset_right = 335.0
+offset_bottom = 546.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.113725, 1, 1)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 16.0
+offset_top = -9.0
+offset_right = 264.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 20
+text = "درصورت کلیک
+قسمت های رنگی"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="C1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 18.0
+offset_top = 86.0
+offset_right = 354.0
+offset_bottom = 575.0
+
+[node name="back" type="ColorRect" parent="C1"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 105.0
+offset_bottom = 486.0
+color = Color(0.0666667, 1, 1, 1)
+
+[node name="Label" type="Label" parent="C1/back"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 205.0
+offset_right = 81.0
+offset_bottom = 255.0
+theme_override_font_sizes/font_size = 20
+text = "صفحه به عقب"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="men" type="ColorRect" parent="C1"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 11.0
+offset_right = 215.0
+offset_bottom = 484.0
+color = Color(0, 0.831373, 0.0705882, 0.835294)
+
+[node name="Label" type="Label" parent="C1/men"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 86.0
+offset_right = 80.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 20
+text = "منو"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="next" type="ColorRect" parent="C1"]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 14.0
+offset_right = 323.0
+offset_bottom = 487.0
+color = Color(0.0666667, 1, 1, 1)
+
+[node name="Label" type="Label" parent="C1/next"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 9.0
+offset_top = 198.0
+offset_right = 81.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 20
+text = "صفحه به جلو"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="C2" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 361.0
+offset_bottom = 78.0
+
+[node name="Sprite2D" type="Sprite2D" parent="C2"]
+position = Vector2(15, 11)
+scale = Vector2(0.954416, 0.647059)
+texture = ExtResource("1_3csot")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="C2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 39.0
+offset_top = 157.0
+offset_right = -26.0
+offset_bottom = 197.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.701961, 0.823529, 1)
+
+[node name="Label" type="Label" parent="C2/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 29.0
+offset_top = 9.0
+offset_right = 277.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = " باز گشت به عقب تظیمات فوت غیر... کتاب خوان جستحو فهرست کتاب"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="C3" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 575.0
+offset_right = 357.0
+offset_bottom = 645.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="C3"]
+position = Vector2(8, 13)
+scale = Vector2(0.945869, 0.647059)
+texture = ExtResource("4_4wupp")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="C3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 38.0
+offset_top = -416.0
+offset_right = -27.0
+offset_bottom = -376.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.701961, 0.823529, 1)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="C3/ColorRect"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 15.0
+offset_top = 9.0
+offset_right = 271.0
+offset_bottom = 102.0
+theme_override_font_sizes/font_size = 20
+text = "نمایش صفحه 
+وصفحه های خوانده شده"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 108.0
+offset_right = 114.0
+offset_bottom = 148.0
+text = "بستن"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

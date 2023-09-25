@@ -1,0 +1,138 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvgbe6iptqou8"]
+
+[ext_resource type="Texture2D" uid="uid://cspb0g7sh63ds" path="res://9_My_assets/1_assats/A_42.bmp" id="1_fbeu5"]
+[ext_resource type="Script" path="res://5_MVC_TPM/TPM_Settings/TPM_Settings.gd" id="1_jouf6"]
+[ext_resource type="Texture2D" uid="uid://dt4go7hkjd2xo" path="res://9_My_assets/1_assats/A_24.png" id="3_4sjef"]
+
+[sub_resource type="Animation" id="Animation_02ck1"]
+resource_name = "Test_1"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, -260)]
+}
+
+[sub_resource type="Animation" id="Animation_c6sr0"]
+resource_name = "Test_2"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -80), Vector2(0, -180)]
+}
+
+[sub_resource type="Animation" id="Animation_mrxc1"]
+resource_name = "Test_3"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -80)]
+}
+
+[sub_resource type="Animation" id="Animation_bb07q"]
+resource_name = "Test_4"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 100), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m1p2g"]
+_data = {
+"Test_1": SubResource("Animation_02ck1"),
+"Test_2": SubResource("Animation_c6sr0"),
+"Test_3": SubResource("Animation_mrxc1"),
+"Test_4": SubResource("Animation_bb07q")
+}
+
+[node name="TPM_Settings" type="Node2D"]
+script = ExtResource("1_jouf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 313)
+scale = Vector2(0.8322, 0.772936)
+texture = ExtResource("1_fbeu5")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 100.0
+offset_right = 370.0
+offset_bottom = 750.0
+
+[node name="A_1" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -101.0
+offset_right = 371.0
+offset_bottom = 547.0
+
+[node name="A_2" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = 640.0
+offset_right = 372.0
+offset_bottom = 1288.0
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = 15.0
+offset_top = 87.0
+offset_right = 351.0
+offset_bottom = 145.0
+theme_override_font_sizes/font_size = 20
+text = "سلام"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_m1p2g")
+}
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="TextureRect" type="TextureButton" parent="."]
+offset_left = 287.0
+offset_top = 5.0
+offset_right = 356.0
+offset_bottom = 65.0
+texture_normal = ExtResource("3_4sjef")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="TextureRect" to="." method="_on_texture_rect_pressed"]
