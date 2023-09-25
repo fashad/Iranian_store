@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cao5fpix0aeyc"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/UI/All_book/List_Download_All_Book/List_Download_All_Book.gd" id="1_f7w6l"]
+
+[node name="List_Download_All_Book" type="Node2D"]
+script = ExtResource("1_f7w6l")
+
+[node name="s" type="ScrollContainer" parent="."]
+offset_left = 52.0
+offset_top = 72.0
+offset_right = 316.0
+offset_bottom = 512.0
+
+[node name="v" type="VBoxContainer" parent="s"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="masaj" type="Label" parent="."]
+modulate = Color(0.0588235, 0.0588235, 0.0588235, 1)
+offset_left = 61.0
+offset_top = 251.0
+offset_right = 328.0
+offset_bottom = 336.0
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://bra48qddhfomm"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/Toush/Toush_Time_3/Toush_Time_3.gd" id="1_644p8"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="2_kih4d"]
+[ext_resource type="Texture2D" uid="uid://bp5xrjxi4qwkb" path="res://9_My_assets/1_assats/A_30.png" id="3_3a8ey"]
+[ext_resource type="Texture2D" uid="uid://mqqhunye4cx5" path="res://9_My_assets/1_assats/A_31.png" id="4_a1m0p"]
+[ext_resource type="Texture2D" uid="uid://dvu5b6w8uyp7i" path="res://9_My_assets/1_assats/share.png" id="5_m8nci"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="6_f6g15"]
+[ext_resource type="PackedScene" uid="uid://bw7yjkeyj0xe7" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_W/Highlight_Word/Highlight_Word.tscn" id="7_ebbnq"]
+[ext_resource type="PackedScene" uid="uid://cnm0iuirahed8" path="res://1_MVC_Android/Tools/UI_Color_tools/Highlight_C/Highlight_Clear/Highlight_Clear.tscn" id="8_gj2fx"]
+[ext_resource type="PackedScene" uid="uid://b5pir041fc3v7" path="res://1_MVC_Android/Tools/UI_Color_tools/Share/Share.tscn" id="9_dciy0"]
+
+[node name="Toush_Time_3" type="Node2D"]
+script = ExtResource("1_644p8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 8)
+scale = Vector2(0.508333, 0.46789)
+texture = ExtResource("2_kih4d")
+centered = false
+
+[node name="h" type="HBoxContainer" parent="Sprite2D"]
+offset_top = 11.0
+offset_right = 718.0
+offset_bottom = 98.0
+
+[node name="ColorRect4" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect3" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+color = Color(1, 1, 1, 0)
+
+[node name="Button_Clear" type="TextureButton" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+texture_normal = ExtResource("3_3a8ey")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 0.5
+color = Color(1, 1, 1, 0)
+
+[node name="Button_Color" type="TextureButton" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+texture_normal = ExtResource("4_a1m0p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 0.5
+color = Color(1, 1, 1, 0)
+
+[node name="Button_Share" type="TextureButton" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+texture_normal = ExtResource("5_m8nci")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect5" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 4.0
+color = Color(1, 1, 1, 0)
+
+[node name="Button_back" type="TextureButton" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+texture_normal = ExtResource("6_f6g15")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect6" type="ColorRect" parent="Sprite2D/h"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.0
+color = Color(1, 1, 1, 0)
+
+[node name="Highlight_Word" parent="." instance=ExtResource("7_ebbnq")]
+visible = false
+
+[node name="Highlight_Clear" parent="." instance=ExtResource("8_gj2fx")]
+visible = false
+
+[node name="3_Share" parent="." instance=ExtResource("9_dciy0")]
+visible = false
+
+[connection signal="pressed" from="Sprite2D/h/Button_Clear" to="." method="_on_Button_Clear_pressed"]
+[connection signal="pressed" from="Sprite2D/h/Button_Color" to="." method="_on_Button_Color_pressed"]
+[connection signal="pressed" from="Sprite2D/h/Button_Share" to="." method="_on_Button_Share_pressed"]
+[connection signal="pressed" from="Sprite2D/h/Button_back" to="." method="_on_Button_back_pressed"]

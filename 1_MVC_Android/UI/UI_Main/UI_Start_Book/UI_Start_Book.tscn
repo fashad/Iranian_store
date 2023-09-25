@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr40vderlkqga"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/UI/UI_Main/UI_Start_Book/UI_Start_Book.gd" id="1_r5rqd"]
+
+[node name="UI_Start_Book" type="Node2D"]
+script = ExtResource("1_r5rqd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 154.0
+offset_right = 316.0
+offset_bottom = 243.0
+text = "UI_Start_Book"
+horizontal_alignment = 1
+vertical_alignment = 1

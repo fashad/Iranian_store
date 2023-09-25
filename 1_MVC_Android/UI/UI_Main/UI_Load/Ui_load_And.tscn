@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpnhcki8hniwe"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/UI/UI_Main/UI_Load/Ui_load_And.gd" id="1_epmfo"]
+[ext_resource type="Texture2D" uid="uid://s7qwstqfwqvu" path="res://9_My_assets/1_assats/menu.png" id="2_ni5fm"]
+[ext_resource type="FontFile" uid="uid://dpcyp7gojfv4l" path="res://9_My_assets/2_Font/tahoma.ttf" id="2_pfy2k"]
+[ext_resource type="Texture2D" uid="uid://vekujbl7n2nj" path="res://9_My_assets/1_assats/A_56.jpg" id="3_w0qhc"]
+
+[sub_resource type="Animation" id="Animation_7oc1n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tqkhq"]
+resource_name = "play"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 0.701961, 0, 1), Color(0.333333, 1, 0, 1), Color(0.0313726, 0, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_648vc"]
+_data = {
+"RESET": SubResource("Animation_7oc1n"),
+"play": SubResource("Animation_tqkhq")
+}
+
+[node name="UI_Load_And" type="Node2D"]
+script = ExtResource("1_epmfo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, 1)
+scale = Vector2(0.703499, 0.847656)
+texture = ExtResource("2_ni5fm")
+centered = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 391.0
+offset_bottom = 665.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(38, 256)
+scale = Vector2(0.388021, 0.397129)
+texture = ExtResource("3_w0qhc")
+centered = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 94.0
+offset_top = 263.0
+offset_right = 292.0
+offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("2_pfy2k")
+theme_override_font_sizes/font_size = 22
+text = "Loading book..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A_2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_648vc")
+}

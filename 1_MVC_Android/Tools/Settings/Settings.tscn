@@ -1,0 +1,523 @@
+[gd_scene load_steps=23 format=3 uid="uid://b3khgwe60f04l"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/Settings/Settings.gd" id="1_nybh2"]
+[ext_resource type="FontFile" uid="uid://dpcyp7gojfv4l" path="res://9_My_assets/2_Font/tahoma.ttf" id="2_678mq"]
+[ext_resource type="Texture2D" uid="uid://dfdb8s731vgf1" path="res://9_My_assets/1_assats/backgrsndpng.png" id="2_lq4t0"]
+[ext_resource type="Texture2D" uid="uid://g22je165p4f7" path="res://9_My_assets/1_assats/A_4.png" id="3_ilphk"]
+[ext_resource type="Texture2D" uid="uid://d3cimovk5buup" path="res://9_My_assets/1_assats/A_8.png" id="5_6vckt"]
+[ext_resource type="Texture2D" uid="uid://c4qjidcq847yx" path="res://9_My_assets/1_assats/A_46_..png" id="6_3ey8h"]
+[ext_resource type="Texture2D" uid="uid://cqyl5ucti48ek" path="res://9_My_assets/1_assats/A_11.png" id="7_eguqf"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="8_6trpu"]
+[ext_resource type="Texture2D" uid="uid://lkyacj6q7vnm" path="res://9_My_assets/1_assats/A_12.png" id="9_igmog"]
+[ext_resource type="Texture2D" uid="uid://dwj4c0e458epj" path="res://9_My_assets/1_assats/A_13.png" id="10_pni8j"]
+[ext_resource type="Texture2D" uid="uid://bwltkfniom6v6" path="res://9_My_assets/1_assats/A_14.png" id="12_sk7st"]
+[ext_resource type="Texture2D" uid="uid://g6fcus7dbnvi" path="res://9_My_assets/1_assats/A_17.png" id="14_sgtdg"]
+[ext_resource type="Texture2D" uid="uid://dkr4mg67vnpxn" path="res://9_My_assets/1_assats/A_19.png" id="15_jkjdg"]
+[ext_resource type="Texture2D" uid="uid://csocw1gyqs8ub" path="res://9_My_assets/1_assats/A_17.1.png" id="16_cfep8"]
+[ext_resource type="Texture2D" uid="uid://d2odm0oknhqvt" path="res://9_My_assets/1_assats/A_17_1.png" id="17_vf6q6"]
+[ext_resource type="Texture2D" uid="uid://jw4hv63xqm15" path="res://9_My_assets/1_assats/A_20.png" id="18_b6665"]
+[ext_resource type="Texture2D" uid="uid://iiebw78kjbbg" path="res://9_My_assets/1_assats/A_15.png" id="19_c75u7"]
+[ext_resource type="Texture2D" uid="uid://btulqk70a6g7s" path="res://9_My_assets/1_assats/A_16.png" id="20_h1l0w"]
+
+[sub_resource type="Animation" id="Animation_rp3ox"]
+resource_name = "New_Off"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("A_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 660)]
+}
+
+[sub_resource type="Animation" id="Animation_jcydj"]
+resource_name = "New_On"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("A_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 660), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a1lu0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("A_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 660)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yuvns"]
+_data = {
+"New_Off": SubResource("Animation_rp3ox"),
+"New_On": SubResource("Animation_jcydj"),
+"RESET": SubResource("Animation_a1lu0")
+}
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_nybh2")
+
+[node name="A_1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 660.0
+offset_right = 370.0
+offset_bottom = 1310.0
+
+[node name="Sprite2D" type="Sprite2D" parent="A_1"]
+position = Vector2(-7, 285)
+scale = Vector2(0.721591, 0.475515)
+texture = ExtResource("2_lq4t0")
+centered = false
+
+[node name="line_" type="Control" parent="A_1/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 17.0
+offset_top = 166.0
+offset_right = 520.0
+offset_bottom = 757.0
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 13.8583
+offset_top = 21.0293
+offset_right = 484.858
+offset_bottom = 26.0293
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 174.528
+offset_top = 219.0
+offset_right = 178.528
+offset_bottom = 391.0
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 337.772
+offset_top = 218.846
+offset_right = 341.772
+offset_bottom = 390.846
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 2
+offset_left = 335.37
+offset_top = 218.71
+offset_right = 335.37
+offset_bottom = 353.71
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 13.8583
+offset_top = 214.504
+offset_right = 484.858
+offset_bottom = 219.504
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 15.2441
+offset_top = 391.155
+offset_right = 486.244
+offset_bottom = 396.155
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="A_1/Sprite2D/line_"]
+layout_mode = 0
+offset_left = 13.8583
+offset_top = 511.025
+offset_right = 484.858
+offset_bottom = 516.025
+color = Color(0.0196078, 0.0196078, 0.0196078, 1)
+
+[node name="A_1" type="HBoxContainer" parent="A_1/Sprite2D"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 493.0
+offset_bottom = 175.0
+size_flags_horizontal = 3
+
+[node name="Reset_click" type="TextureButton" parent="A_1/Sprite2D/A_1"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("3_ilphk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/A_1"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 30
+text = "تنظیمات کتاب خوان"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="TextureButton" parent="A_1/Sprite2D/A_1"]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 13
+texture_normal = ExtResource("5_6vckt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureButton" type="TextureButton" parent="A_1/Sprite2D"]
+offset_left = 45.7323
+offset_top = 203.99
+offset_right = 134.732
+offset_bottom = 367.99
+texture_normal = ExtResource("6_3ey8h")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_2" type="VBoxContainer" parent="A_1/Sprite2D"]
+custom_minimum_size = Vector2(100, 100)
+offset_left = 340.913
+offset_top = 214.504
+offset_right = 491.913
+offset_bottom = 349.504
+size_flags_horizontal = 3
+size_flags_vertical = 5
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/A_2"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 20
+text = "حرکت کلیک"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/A_2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="HBox" type="HBoxContainer" parent="A_1/Sprite2D/A_2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/A_2/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="Button_style_1" type="TextureButton" parent="A_1/Sprite2D/A_2/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("7_eguqf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureButton" parent="A_1/Sprite2D/A_2/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_6trpu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_style_2" type="TextureButton" parent="A_1/Sprite2D/A_2/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("9_igmog")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="h" type="HBoxContainer" parent="A_1/Sprite2D"]
+offset_left = 34.6457
+offset_top = 397.464
+offset_right = 496.646
+offset_bottom = 532.464
+
+[node name="A_4" type="VBoxContainer" parent="A_1/Sprite2D/h"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/h/A_4"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 20
+text = "پاراگراف"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/h/A_4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="HBox" type="HBoxContainer" parent="A_1/Sprite2D/h/A_4"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/h/A_4/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
+color = Color(1, 1, 1, 0)
+
+[node name="pra_1" type="TextureButton" parent="A_1/Sprite2D/h/A_4/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("19_c75u7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/h/A_4/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+color = Color(1, 1, 1, 0)
+
+[node name="pra_2" type="TextureButton" parent="A_1/Sprite2D/h/A_4/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("20_h1l0w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_6" type="VBoxContainer" parent="A_1/Sprite2D/h"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/h/A_6"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 20
+text = "نوع فونت"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/h/A_6"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="HBox" type="HBoxContainer" parent="A_1/Sprite2D/h/A_6"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/h/A_6/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="Button_style_1" type="TextureButton" parent="A_1/Sprite2D/h/A_6/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_6trpu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label_Style" type="Label" parent="A_1/Sprite2D/h/A_6/HBox"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_style_2" type="TextureButton" parent="A_1/Sprite2D/h/A_6/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("8_6trpu")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
+
+[node name="A_3" type="VBoxContainer" parent="A_1/Sprite2D/h"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/h/A_3"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 20
+text = "سایز فونت"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="A_1/Sprite2D/h/A_3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="HBox" type="HBoxContainer" parent="A_1/Sprite2D/h/A_3"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/h/A_3/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 1, 1, 0)
+
+[node name="Textu_Small" type="TextureButton" parent="A_1/Sprite2D/h/A_3/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("10_pni8j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label_size" type="Label" parent="A_1/Sprite2D/h/A_3/HBox"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 30
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Textu_Small2" type="TextureButton" parent="A_1/Sprite2D/h/A_3/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("12_sk7st")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_5" type="HBoxContainer" parent="A_1/Sprite2D"]
+offset_left = 45.7323
+offset_top = 574.115
+offset_right = 496.732
+offset_bottom = 656.115
+
+[node name="A_colr_defalt" type="TextureButton" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("14_sgtdg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_colr_Black" type="TextureButton" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("15_jkjdg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_colr_White" type="TextureButton" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("16_cfep8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_colr_yellow_2" type="TextureButton" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("17_vf6q6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="A_colr_Black_Yellowing" type="TextureButton" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("18_b6665")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="A_1/Sprite2D/A_5"]
+modulate = Color(0.0509804, 0.0509804, 0.0509804, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_678mq")
+theme_override_font_sizes/font_size = 20
+text = "حالت مطالعه"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="A_1/Sprite2D/A_5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+color = Color(1, 1, 1, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yuvns")
+}
+
+[connection signal="pressed" from="A_1/Sprite2D/A_1/Reset_click" to="." method="_on_Reset_click_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_1/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_2/HBox/Button_style_1" to="." method="_on_but_Left_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_2/HBox/TextureRect" to="." method="_on_Button_style_1_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_2/HBox/Button_style_2" to="." method="_on_but_Right_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_4/HBox/pra_1" to="." method="_on_pra_1_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_4/HBox/pra_2" to="." method="_on_pra_2_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_6/HBox/Button_style_1" to="." method="_on_Button_style_1_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_6/HBox/Button_style_2" to="." method="_on_Button_style_2_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_3/HBox/Textu_Small" to="." method="_on_Textu_Small_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/h/A_3/HBox/Textu_Small2" to="." method="_on_Textu_big_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_5/A_colr_defalt" to="." method="_on_A_colr_defalt_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_5/A_colr_Black" to="." method="_on_A_colr_Black_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_5/A_colr_White" to="." method="_on_A_colr_White_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_5/A_colr_yellow_2" to="." method="_on_A_colr_yellow_2_pressed"]
+[connection signal="pressed" from="A_1/Sprite2D/A_5/A_colr_Black_Yellowing" to="." method="_on_A_colr_Black_Yellowing_pressed"]

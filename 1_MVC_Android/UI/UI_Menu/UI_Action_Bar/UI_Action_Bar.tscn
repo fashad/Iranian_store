@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://y5fqdavr7d20"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/UI/UI_Menu/UI_Action_Bar/UI_Action_Bar.gd" id="1_aj6iq"]
+[ext_resource type="Texture2D" uid="uid://ti2bg2hivd8" path="res://9_My_assets/1_assats/Action_Bar.png" id="2_7j27r"]
+[ext_resource type="Texture2D" uid="uid://du8bgk0mexd7b" path="res://9_My_assets/1_assats/A_7.png" id="3_071vm"]
+[ext_resource type="Texture2D" uid="uid://b2djjy68s01c8" path="res://9_My_assets/1_assats/A_6.png" id="4_f231m"]
+[ext_resource type="Texture2D" uid="uid://bhi8gb67sq2ev" path="res://9_My_assets/1_assats/A_5.png" id="5_epcyw"]
+[ext_resource type="Texture2D" uid="uid://cgxujxy1rqy5b" path="res://9_My_assets/1_assats/A_24.png" id="6_4cnxe"]
+
+[node name="UI_Action_Bar" type="Node2D"]
+script = ExtResource("1_aj6iq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(6, 9)
+scale = Vector2(0.502778, 0.46789)
+texture = ExtResource("2_7j27r")
+centered = false
+
+[node name="Button_module" type="TextureButton" parent="."]
+offset_left = 36.0
+offset_top = 17.0
+offset_right = 88.0
+offset_bottom = 50.0
+texture_normal = ExtResource("3_071vm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_serarch" type="TextureButton" parent="."]
+offset_left = 123.0
+offset_top = 17.0
+offset_right = 166.0
+offset_bottom = 50.0
+texture_normal = ExtResource("4_f231m")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_SettingS" type="TextureButton" parent="."]
+offset_left = 200.0
+offset_top = 16.0
+offset_right = 243.0
+offset_bottom = 49.0
+texture_normal = ExtResource("5_epcyw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_back" type="TextureButton" parent="."]
+offset_left = 276.0
+offset_top = 18.0
+offset_right = 320.0
+offset_bottom = 48.0
+texture_normal = ExtResource("6_4cnxe")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+
+[connection signal="pressed" from="Button_module" to="." method="_on_Button_module_pressed"]
+[connection signal="pressed" from="Button_serarch" to="." method="_on_Button_serarch_pressed"]
+[connection signal="pressed" from="Button_SettingS" to="." method="_on_Button_SettingS_pressed"]
+[connection signal="pressed" from="Button_back" to="." method="_on_Button_back_pressed"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://br3n48exo8xon"]
+
+[ext_resource type="PackedScene" uid="uid://cnpeuxfdpvd4k" path="res://1_MVC_Android/Tools/Toush/View_Next_back_menu/View_Next_back_menu.tscn" id="1_ja3a8"]
+[ext_resource type="Script" path="res://1_MVC_Android/Tools/Toush/UI_Toush.gd" id="1_tnq2u"]
+[ext_resource type="PackedScene" uid="uid://bra48qddhfomm" path="res://1_MVC_Android/Tools/Toush/Toush_Time_3/Toush_Time_3.tscn" id="2_58jd1"]
+
+[node name="UI_Toush" type="Node2D"]
+script = ExtResource("1_tnq2u")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="View_Next_back_menu" parent="." instance=ExtResource("1_ja3a8")]
+
+[node name="Toush_Time_3" parent="." instance=ExtResource("2_58jd1")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.356863)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

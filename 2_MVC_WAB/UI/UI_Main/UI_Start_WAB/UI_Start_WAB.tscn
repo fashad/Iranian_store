@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxv11gvu8jli8"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/UI/UI_Main/UI_Start_WAB/UI_Start_WAB.gd" id="1_lvemg"]
+
+[node name="UI_Start_WAB" type="Node2D"]
+script = ExtResource("1_lvemg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 91.0
+offset_right = 272.0
+offset_bottom = 157.0
+text = "UI_Start_WAB"
+horizontal_alignment = 1
+vertical_alignment = 1

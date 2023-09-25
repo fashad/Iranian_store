@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://tbwj4b0iv7c6"]
+
+[ext_resource type="Script" path="res://2_MVC_WAB/UI/My_Accountt/UI_Launchers_Account/UI_Launchers_Account.gd" id="1_x1o5o"]
+[ext_resource type="PackedScene" uid="uid://cmls2m04kqtfb" path="res://2_MVC_WAB/UI/My_Accountt/My_Account_Load/My_Account_Load.tscn" id="2_j2hom"]
+
+[node name="UI_Launchers_Account" type="Node2D"]
+script = ExtResource("1_x1o5o")
+
+[node name="My_Account_Load" parent="." instance=ExtResource("2_j2hom")]

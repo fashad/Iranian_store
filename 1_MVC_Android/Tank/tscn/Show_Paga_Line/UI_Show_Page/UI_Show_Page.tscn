@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://bstljhxtisn5y"]
+
+[ext_resource type="Script" path="res://1_MVC_Android/Tank/tscn/Show_Paga_Line/UI_Show_Page/UI_Show_Page.gd" id="1_t5ti5"]
+[ext_resource type="PackedScene" uid="uid://jvebdocnmrst" path="res://1_MVC_Android/Tank/tscn/Show_Paga_Line/UI_2_Show_Line/S_1.tscn" id="2_octm4"]
+
+[node name="UI_Show_Page" type="Node2D"]
+script = ExtResource("1_t5ti5")
+
+[node name="View" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="v" type="HBoxContainer" parent="View"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="C1" type="Control" parent="View/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="C" type="Control" parent="View/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 50.0
+
+[node name="v" type="VBoxContainer" parent="View/v/C"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="V4" type="Control" parent="View/v/C/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="V" type="Control" parent="View/v/C/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 100.0
+
+[node name="box" type="VBoxContainer" parent="View/v/C/v/V"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="x1" type="Control" parent="View/v/C/v/V/box"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+
+[node name="x" type="Control" parent="View/v/C/v/V/box"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 62.0
+
+[node name="View" type="Node2D" parent="View/v/C/v/V/box/x"]
+
+[node name="S_1" parent="View/v/C/v/V/box/x/View" instance=ExtResource("2_octm4")]
+
+[node name="V3" type="Control" parent="View/v/C/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="C3" type="Control" parent="View/v"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
